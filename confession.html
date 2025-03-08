@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Love 💖</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffdde1);
+        color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        padding: 20px;
+        animation: fadeInBg 3s ease-in-out;
+        overflow-y: auto;
+      }
+
+      @keyframes fadeInBg {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .letter-container {
+        width: 90%;
+        max-width: 400px;
+        background: white;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0px 0px 30px rgba(255, 100, 200, 0.7);
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out, box-shadow 0.3s;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #ff4081;
+      }
+
+      .letter-container:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 50px rgba(255, 100, 200, 1);
+      }
+
+      .hidden-message {
+        display: none;
+        font-family: "Sacramento", cursive;
+        font-size: 1.8em;
+        color: red;
+        margin-top: 20px;
+        animation: fadeIn 2s forwards;
+        max-width: 90%;
+        line-height: 1.5;
+        overflow-wrap: break-word;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .buttons {
+        display: none;
+        margin-top: 20px;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .btn {
+        font-size: 1.5em;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 120px;
+        font-weight: bold;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .yes-btn {
+        background: #ff4081;
+        color: white;
+      }
+
+      .no-btn {
+        background: #ccc;
+        color: black;
+      }
+
+      .btn:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="letter-container" onclick="revealMessage()">presssss meee! </div>
+
+    <p id="message" class="hidden-message" onclick="showButtons()">
+        I’ve been holding onto this for a while, waiting for the right moment, but I’ve come to realize that sometimes, the best moments are the ones we create ourselves.<br><br>
+        The truth is, you mean more to me than I ever expected. You challenge me, make me think, make me laugh, and somehow, even in silence, you make everything feel right. I admire the way your mind works, the way you see the world, and—if I’m being honest—the way you make my world a little brighter just by being in it.<br><br>
+        I don’t want to dance around this anymore. I like you—not just in a fleeting, surface-level way, but in a way that makes me want to be better, to understand you more, and to share more of my time with you. I don’t know what the future holds, but if there’s a chance for "us," I’d love to take it.<br><br>
+        No pressure, no expectations—just honesty.
+    </p>
+
+    <div id="buttons" class="buttons">
+      <button class="btn yes-btn" onclick="alert('Yay! 🎉')">Yes 💖</button>
+      <button class="btn no-btn" onclick="alert('Aww... 💔')">No 😢</button>
+    </div>
+
+    <script>
+      function revealMessage() {
+        document.getElementById("message").style.display = "block";
+        document.body.style.overflowY = "auto";
+      }
+
+      function showButtons() {
+        document.getElementById("buttons").style.display = "flex";
+      }
+    </script>
+  </body>
+</html>
